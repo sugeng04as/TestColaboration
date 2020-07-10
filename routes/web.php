@@ -12,9 +12,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('main');
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('/', function () {
+        return view('main');
+    });
+    Route::resource('/pertanyaan', 'PertanyaanController');
 });
 
 Auth::routes();
