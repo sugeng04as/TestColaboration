@@ -87,7 +87,6 @@
                     <div class="card-body">
 
                         @yield('content')
-                        <img src="{{asset('/img/erd.png')}}">
                     </div>
                 </div>
                 

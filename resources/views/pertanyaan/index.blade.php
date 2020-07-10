@@ -17,8 +17,10 @@
                 <td style="width: 10%">{{($loop->iteration)}}</td>
                 <td style="width: 45%">{{($tanya->judul)}}</td>
                 <td style="width: 20%">{{($tanya->user_id)}}</td>
-                <td style="width: 25%">
-                    <a href="/" class="badge badge-info">Update</a>
+                <td style="width: 15%;">
+                    <a href="/" class="badge badge-warning"><i class="fas fa-user-edit" style="font-size: 12px; width: 1cm;"></i></a>
+                    <a href="/pertanyaan/{{$tanya->id}}" class="badge badge-primary"><i class="fas fa-info" style="font-size: 12px; width: 1cm;"></i></i></a>
+                    <a href="/" class="badge badge-danger"><i class="far fa-trash-alt" style="font-size: 12px; width: 1cm;"></i></i></a>                    
                 </td>
             </tr>
             @endforeach
