@@ -17,14 +17,20 @@
                 <td style="width: 10%">{{($loop->iteration)}}</td>
                 <td style="width: 45%">{{($tanya->judul)}}</td>
                 <td style="width: 20%">{{($tanya->user_id)}}</td>
-                <td style="width: 15%;">
-                    <a href="/" class="badge badge-warning"><i class="fas fa-user-edit" style="font-size: 12px; width: 1cm;"></i></a>
-                    <a href="/pertanyaan/{{$tanya->id}}" class="badge badge-primary"><i class="fas fa-info" style="font-size: 12px; width: 1cm;"></i></i></a>
-                    <a href="/" class="badge badge-danger"><i class="far fa-trash-alt" style="font-size: 12px; width: 1cm;"></i></i></a>                    
+                <td style="width: 10%;">
+                    <a href="/pertanyaan/{{$tanya->id}}/edit" class="btn btn-warning btn-sm" style="width: 30px;" ><i class="fas fa-edit" ></i></a>
+                    <a href="/pertanyaan/{{$tanya->id}}" class="btn btn-info btn-sm" style="width: 30px;"><i class="fas fa-info" ></i></a>
+                    <form class="d-inline" type="submit" action="/pertanyaan/{{ $tanya->id }}" method="POST">
+                        @method('delete')
+                        @csrf
+                        
+                        <button type="submit" class="btn btn-danger btn-sm" style="width: 30px;"><i class="far fa-trash-alt"></i></button>
+                    </form>                  
                 </td>
             </tr>
             @endforeach
         </tbody>
     </table>
-    <a href="pertanyaan/create" class="btn btn-primary">Tambah Pertanyaan +</a>
+    <a href="pertanyaan/create" class="badge badge-primary" style="float: right;"><i class="fa fa-plus" aria-hidden="true"></i>
+    </a>
 @endsection

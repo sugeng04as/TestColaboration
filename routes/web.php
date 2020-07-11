@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-    return view('jajal');
+    return view('pertanyaan/erd');
 });
 
 Route::group(['middleware' => 'auth'], function(){

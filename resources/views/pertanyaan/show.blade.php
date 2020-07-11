@@ -11,9 +11,10 @@
       <p class="card-text">{{$pertanyaan->isi}}</p>
       <p class="card-text">{{$pertanyaan->created_at}}</p>
         @foreach($pertanyaan->tags as $tag) 
-            <button class="btn btn-info btn-sm"> {{$tag->nama}} </button>
+            <button class="btn btn-sm" style="background-color: rgb(191, 210, 253); width: 1.5cm;"> {{$tag->nama}} </button>
         @endforeach
     </div>
 </div>
+<button class="btn btn-light mt-1"><i class="far fa-comments" aria-hidden="true"></i></button>
 
 @endsection

@@ -1,5 +1,5 @@
 @extends('main')
-@section('header', 'Index Pertanyaan')
+@section('header', 'Edit Pertanyaan')
 
 @section('content')
 
@@ -9,15 +9,11 @@
     <input hidden type="text" name="user_id" id="user_id" value="{{ Auth::user()->id }}">
     <div class="form-group">
       <label for="judul">Judul</label>
-      <input type="text" class="form-control" id="judul" placeholder="Masukkan judul...!" name="judul">
+    <input type="text" class="form-control" id="judul" readonly name="judul" value="{{$pertanyaan->judul}}">
     </div>
     <div class="form-group">
         <label for="isi">Isi</label>
-        <textarea type="text" class="form-control" id="isi" placeholder="Masukkan isi...! "name="isi"></textarea>
-    </div>
-    <div class="form-group">
-        <label for="tag">Tags</label>
-        <input type="text" class="form-control" id="tags" placeholder="Masukkan tag...! "name="tags">
+        <textarea type="text" class="form-control" id="isi" name="isi" value="">{{$pertanyaan->isi}}</textarea>
     </div>
     <button type="submit" class="btn btn-primary mt-3">Submit</button>
     <button type="reset" class="btn btn-primary mt-3">Reset</button>

@@ -78,7 +78,7 @@ class PertanyaanController extends Controller
      */
     public function edit(Pertanyaan $pertanyaan)
     {
-        //
+        return view('pertanyaan.edit', compact('pertanyaan'));
     }
 
     /**
@@ -101,6 +101,7 @@ class PertanyaanController extends Controller
      */
     public function destroy(Pertanyaan $pertanyaan)
     {
-        //
+        Pertanyaan::destroy($pertanyaan->id);
+        return redirect('/pertanyaan');
     }
 }

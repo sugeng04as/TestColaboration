@@ -1,5 +1,5 @@
 @extends('main')
-@section('header', 'Index Pertanyaan')
+@section('header', 'Create Pertanyaan')
 
 @section('content')
 
