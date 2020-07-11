@@ -14,9 +14,9 @@
         <tbody>
             @foreach ($pertanyaan as $tanya)    
             <tr>
-                <td style="width: 10%">{{($loop->iteration)}}</td>
+                <td style="width: 5%; text-align: center">{{($loop->iteration)}}</td>
                 <td style="width: 45%">{{($tanya->judul)}}</td>
-                <td style="width: 20%">{{($tanya->user_id)}}</td>
+                <td style="width: 20%; text-align: center">{{($tanya->user_id)}}</td>
                 <td style="width: 10%;">
                     <a href="/pertanyaan/{{$tanya->id}}/edit" class="btn btn-warning btn-sm" style="width: 30px;" ><i class="fas fa-edit" ></i></a>
                     <a href="/pertanyaan/{{$tanya->id}}" class="btn btn-info btn-sm" style="width: 30px;"><i class="fas fa-info" ></i></a>

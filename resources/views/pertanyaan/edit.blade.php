@@ -3,7 +3,8 @@
 
 @section('content')
 
-<form method="POST" action="/pertanyaan">
+<form method="POST" action="/pertanyaan/{{$pertanyaan->id}}">
+    @method('patch')
     @csrf
     <p class="font-weight-bold ml-4" style="inline">User : {{ Auth::user()->name }}</p>
     <input hidden type="text" name="user_id" id="user_id" value="{{ Auth::user()->id }}">

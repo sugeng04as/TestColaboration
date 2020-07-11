@@ -90,7 +90,13 @@ class PertanyaanController extends Controller
      */
     public function update(Request $request, Pertanyaan $pertanyaan)
     {
-        //
+        Pertanyaan::where('id', $pertanyaan->id)
+        ->update([
+            'judul' => $request->judul,
+            'isi' => $request->isi
+        ]);
+    
+    return redirect('pertanyaan')->with('message','Data Berhasil diupdate');
     }
 
     /**
