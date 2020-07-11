@@ -23,7 +23,6 @@
                     <form class="d-inline" type="submit" action="/pertanyaan/{{ $tanya->id }}" method="POST">
                         @method('delete')
                         @csrf
-                        
                         <button type="submit" class="btn btn-danger btn-sm" style="width: 30px;"><i class="far fa-trash-alt"></i></button>
                     </form>                  
                 </td>
